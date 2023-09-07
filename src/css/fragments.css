@@ -1,0 +1,13 @@
+/* Source: https://github.com/algolia/docsearch/blob/main/packages/website/src/css/fragments.css */
+
+:root {
+  --nebula-900: #141d61;
+  --nebula-800: #1e2b8f;
+  --nebula-700: #2b3cbb;
+  --nebula-600: #3c4fe0;
+  --nebula-500: #5468ff;
+  --nebula-400: #7c8aff;
+  --nebula-300: #a3acff;
+  --nebula-200: #cacfff;
+  --nebula-100: #f2f3ff;
+}
