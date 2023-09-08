@@ -1,0 +1,423 @@
+---
+sidebar_position: 5
+sidebar_label: Styling
+---
+
+# Styling
+
+Repeatio supports styling with `Markdown` and `HTML` for the following elements: **title**, **help** and **answerOptions**.  
+Try to always style these elements with Markdown first and only use HTML if markdown doesn't have the desired effect.  
+This is for example the case if you want to use css, escape the default styling or have multiple line breaks.
+
+## Line Breaks
+
+<p>
+  Line breaks in markdown can be archived by hitting the <code>enter</code> key.
+</p>
+
+<table>
+  <tr>
+    <th>Type</th>
+    <th>Markdown</th>
+    <th>HTML</th>
+    <th>Result</th>
+  </tr>
+  <tr>
+    <td>Single line break</td>
+    <td>
+      Top Text <br /> New line
+    </td>
+    <td>
+      Top Text <code>&lt;br /&gt;</code> New line
+    </td>
+    <td>
+      Top Text <br />
+      New line
+    </td>
+  </tr>
+  <tr>
+    <td>Multiple line break</td>
+    <td>
+      Text broken<code>&ensp;</code>
+      <sup>
+        <a href='#footnote-line-break-1'>[1]</a>
+      </sup>
+      <br />
+      into multiple lines{' '}
+    </td>
+    <td>
+      Text broken <code>&lt;br /&gt;&lt;br /&gt;</code>into multiple lines
+    </td>
+    <td>
+      Text broken <br /> <br /> into multiple lines
+    </td>
+  </tr>
+</table>
+
+<p id='footnote-line-break-1'>[1]: Notice how there are two blank spaces!</p>
+
+## Emphasis (strong, italic, strikethrough, code, underline)
+
+<table>
+  <tr>
+    <th>Type</th>
+    <th>Markdown</th>
+    <th>HTML</th>
+    <th>Result</th>
+  </tr>
+  <tr>
+    <td>strong</td>
+    <td>
+      <code>**text**</code>
+    </td>
+    <td>
+      <code>&lt;b&gt;text&lt;/b&gt;</code>
+    </td>
+    <td>
+      <b>text</b>
+    </td>
+  </tr>
+  <tr>
+    <td>italic</td>
+    <td>
+      <code>*text*</code> or <code>_text_</code>
+    </td>
+    <td>
+      <code>&lt;i&gt;text&lt;/i&gt;</code>
+    </td>
+    <td>
+      <i>text</i>
+    </td>
+  </tr>
+  <tr>
+    <td>strong and italic</td>
+    <td>
+      <code>***text***</code>
+    </td>
+    <td>
+      <code>&lt;b&gt;&lt;i&gt;text&lt;/i&gt;&lt;/b&gt;</code>
+    </td>
+    <td>
+      <b>
+        <i>text</i>
+      </b>
+    </td>
+  </tr>
+  <tr>
+    <td>strikethrough</td>
+    <td>
+      <code>~~text~~</code>
+    </td>
+    <td>
+      <code>&lt;s&gt;text&lt;/s&gt;</code>
+    </td>
+    <td>
+      <s>text</s>
+    </td>
+  </tr>
+  <tr>
+    <td>code</td>
+    <td>
+      <code>`text`</code>
+    </td>
+    <td>
+      <code>&lt;code&gt;text&lt;/code&gt;</code>
+    </td>
+    <td>
+      <code>text</code>
+    </td>
+  </tr>
+  <tr>
+    <td>underline</td>
+    <td></td>
+    <td>
+      <code>&lt;u&gt;text&lt;/u&gt;</code>
+    </td>
+    <td>
+      <u>text</u>
+    </td>
+  </tr>
+</table>
+
+## Ignoring Markdown formatting
+
+Use backslashes to ignore the markdown syntax.
+
+<table>
+  <tr>
+    <th>Input</th>
+    <th>Result</th>
+  </tr>
+  <tr>
+    <td>
+
+```markdown
+This \*text is unaffected\* by markdown
+```
+
+  </td>
+    <td>
+      <p>This *text is unaffected* by markdown</p>
+    </td>
+  </tr>
+</table>
+
+## Lists
+
+You can use unordered and ordered lists
+
+  <table>
+    <tr>
+      <th>Type</th>
+      <th>Markdown</th>
+      <th>HTML</th>
+      <th>Result</th>
+    </tr>
+    <tr>
+      <td>Unordered List</td>
+      <td>
+
+```markdown
+some text...
+
+- First unordered item
+- Another item
+- Last item
+
+Text outside list
+```
+
+</td>
+      <td>
+
+```html
+some text...
+<ul>
+  <li>First unordered item</li>
+  <li>Another item</li>
+  <li>Last item</li>
+</ul>
+Text outside list
+```
+
+  </td>
+      <td>
+        <p>some text...</p>
+        <ul>
+          <li>First unordered list item</li>
+          <li>Another item</li>
+          <li>Last item</li>
+        </ul>
+        <p>Text outside list</p>
+      </td>
+    </tr>
+    <tr>
+      <td>Ordered List</td>
+<td>
+
+```markdown
+some text...
+
+1. First ordered item
+2. Another item
+3. Last item
+
+Text outside list
+```
+
+</td>
+      <td>
+
+```html
+some text...
+<ol>
+  <li>First ordered list item</li>
+  <li>Another item</li>
+  <li>Last item</li>
+</ol>
+Text outside list
+```
+
+  </td>
+      <td>
+        <p>some text...</p>
+        <ol>
+          <li>First ordered list item</li>
+          <li>Another item</li>
+          <li>Last item</li>
+        </ol>
+        <p>Text outside list</p>
+      </td>  
+    </tr>
+  </table>
+
+:::caution Achtung
+To exit a list in markdown you have to add a blank line between the list and the following content or add two to blank spaces at the end of the last list item
+:::
+
+:::info Info
+Unordered list in markdown can use asterisks (<code>\*</code>), minuses (<code>-</code>) or pluses (<code>+</code>).
+:::
+
+## Tables
+
+  <table>
+    <tr>
+      <th>Markdown</th>
+      <th>HTML</th>
+      <th>Result</th>
+    </tr>
+    <tr>
+      <td>
+
+```markdown
+some text
+
+| Heading 1 | Heading 2 |
+| --------- | :-------: |
+| Item 1    |  Item 2   |
+| Item 3    |  Item 4   |
+
+Text outside table
+```
+
+</td>
+  <td>
+
+```html
+some text...
+<table>
+  <tr>
+    <th>Heading 1</th>
+    <th style="text-align:center">Heading 2</th>
+  </tr>
+  <tr>
+    <td>Item 1</td>
+    <td style="text-align:center">Item 2</td>
+  </tr>
+  <tr>
+    <td>Item 3</td>
+    <td style="text-align:center">Item 4</td>
+  </tr>
+</table>
+Text outside table
+```
+
+</td>
+      
+      <td>
+some text
+
+| Heading 1 | Heading 2 |
+| --------- | :-------: |
+| Item 1    |  Item 2   |
+| Item 3    |  Item 4   |
+
+Text outside table
+
+</td>
+</tr>
+
+  </table>
+
+:::info Info
+Use the following syntax below the heading to align items in a markdown table:
+
+- left (| :------- |) is optional as it is identical to | ------- |
+- center (| :-------: |)
+- right (| -------: |)
+
+:::
+
+## Bilder
+
+<p>
+  Display images by adding <code>!</code>, wrapping the alt text inside <code>[]</code> and then wrapping the link for the image in parentheses{' '}
+  <code>()</code>.
+</p>
+
+  <table>
+    <tr>
+      <th>Markdown</th>
+      <th>HTML</th>
+      <th>Result</th>
+    </tr>
+    <tr>
+      <td>
+
+```markdown
+![md](https://upload.wikimedia.org/wikipedia/commons/d/d9/Markdown.png)
+```
+
+</td>
+  <td>
+
+```html
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Markdown.png" alt="md" />
+```
+
+</td>
+      // Result -->
+      <td>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Markdown.png" alt="md" />
+      </td>
+    </tr>
+  </table>
+
+## CSS
+
+Use inline css in combination with html to style an element.
+
+<table>
+  <tr>
+    <th>Input</th>
+    <th>Result</th>
+  </tr>
+  <tr>
+    <td>
+
+```markdown
+This text is unaffected
+
+<p style="color: lightblue; font-weight: 700">I am blue</p>
+```
+
+</td>
+    <td>
+      <p style={{color: "lightblue", fontWeight: 700}}>I am blue</p>
+    </td>
+  </tr>
+</table>
+
+:::note Note  
+Using html elements may overwrite the default styling!
+:::
+
+## Formeln (LaTeX)
+
+Repeatio uses LaTeX to render mathematical functions.  
+Write the function inside two dollar signs (`$`).
+
+<table>
+  <tr>
+    <th>Input</th>
+    <th>Result</th>
+  </tr>
+  <tr>
+    <td>
+
+```markdown
+$x =\frac{\sqrt{20}}{3\times(5-10)^2}$
+```
+
+</td>
+    <td>
+
+$x =\frac{\sqrt{20}}{3\times(5-10)^2}$
+
+</td>
+
+  </tr>
+</table>
+
+**[Here](./.github/Docs/LaTeX.md)** is a detailed guide.
