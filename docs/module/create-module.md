@@ -5,11 +5,13 @@ sidebar_label: Modul erstellen
 
 # Modul erstellen
 
-1. Click on `Add Module` in the `Module Overview`
-2. Fill in the fields under `Create new Module`
-    - `ID`: The ID of the module has to be unique!
-    - `Name`: The full name of the new module.
-    - `Language`: The language is used for spellchecking when creating a question.
-    - `Compatibility Version`: This value describes when the module was created. The user can't change this value.
-3. Click on `Create`
-4. The new module will appear in the `Module Overview` and can be viewed by clicking on `View >`
+1. Klick auf `Add Module` in der Modul Übersicht
+2. Wähle `Create Module` aus
+3. Fülle die Felder `ID`, `Name` und `Language` aus
+
+:::info
+Die `ID` des Moduls muss einzigartig und ohne Leerzeichen sein!
+:::
+
+4. Klick auf `Create`
+5. Das neue Modul erscheint nun in der Modul Übersicht und kann mit einem Klick auf `View` geöffnet werden

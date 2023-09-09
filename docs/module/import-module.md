@@ -5,13 +5,15 @@ sidebar_label: Modul importieren
 
 # Modul importieren
 
-1. Click on `Add Module` in the `Module Overview`
-2. Either click on `Browse files` and select the file(s) `your-file.json` or `drag and drop` the file(s) into the dotted area
-3. Finally click on `Add`
-4. The new module will appear in the `Module Overview` and can be viewed by clicking on `View >`
+1. Klick auf `Add Module` in der Modul Übersicht
+2. Wähle `Import Module` aus
+3. Klick entweder auf `Browse files` und wähle die Datei(en) aus oder `drag and drop` die Datei(en) in den gepunkteten Bereich
 
 :::danger Achtung
-
-If the module already exist in your modules it will be completely overwritten with the imported module!
-
+When das Modul mit der ID bereits existiert, wird es komplett mit dem importierten Modul überschrieben!
 :::
+
+4. Klick nun auf `Add`
+5. Das neue Modul erscheint nun in der Modul Übersicht und kann mit einem Klick auf `View` geöffnet werden
+
+

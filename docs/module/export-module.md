@@ -5,6 +5,6 @@ sidebar_label: Modul exportieren
 
 # Modul exportieren
 
-1. In the `Module Overview` click on the 3 dots (`⋮`) in the module you want to export
-2. Click on `Export`
-3. Depending on the browser you will either be prompted to choose a file location or the module will be downloaded directly to the default download location
+1. Klick in der Modul Übersicht auf die drei Punkte (`⋮`) in dem Modul, welches exportiert werden soll
+2. Klick auf `Export`
+3. Abhängig von dem verwendetem Browser öffnet sich ein Fenster, wo der Speicherort festgelegt werden kann oder das Modul wird direkt in den standard Download-Speicherort heruntergeladen
