@@ -5,143 +5,146 @@ sidebar_label: Styling
 
 # Styling
 
-Repeatio supports styling with `Markdown` and `HTML` for the following elements: **title**, **help** and **answerOptions**.  
-Try to always style these elements with Markdown first and only use HTML if markdown doesn't have the desired effect.  
-This is for example the case if you want to use css, escape the default styling or have multiple line breaks.
+Repeatio unterstützt die Gestaltung mit `Markdown` und `HTML` für die folgenden Elemente: **Titel**, **Hilfe** und **Frage Optionen**.
 
-## Line Breaks
+:::tip Tipp
+Versuch immer die elemente zunächst mit Markdown zu stylen und benutzt HTML nur, wenn Markdown nicht den gewünschten Effekt erzielt. Dies ist zum Beispiel der Fall, wenn man CSS verwenden möchte, das Standardstyling überschreiben will oder mehrere Zeilenumbrüche haben möchtest.
+:::
+
+## Zeilenumbrüche
 
 <p>
-  Line breaks in markdown can be archived by hitting the <code>enter</code> key.
+  Zeilenumbrüche können in Markdown durch drücken der <code>Enter</code> Taste erreicht werden. Um einen Zeilenumbruch
+  in HTML zu erreichen, muss <code>&lt;br /&gt;</code> verwendet werden.
 </p>
 
 <table>
   <tr>
-    <th>Type</th>
+    <th>Typ</th>
     <th>Markdown</th>
     <th>HTML</th>
-    <th>Result</th>
+    <th>Resultat</th>
   </tr>
   <tr>
-    <td>Single line break</td>
+    <td>Einzelner Zeilenumbruch</td>
     <td>
-      Top Text <br /> New line
+      Oberer Text <br /> Neue Zeile
     </td>
     <td>
-      Top Text <code>&lt;br /&gt;</code> New line
+      Oberer Text <code>&lt;br /&gt;</code> Neue Zeile
     </td>
     <td>
-      Top Text <br />
-      New line
+      Oberer Text <br />
+      Neue Zeile
     </td>
   </tr>
   <tr>
-    <td>Multiple line break</td>
+    <td>Mehrere Zeilenumbrüche</td>
     <td>
-      Text broken<code>&ensp;</code>
+      Text in mehrere<code>&ensp;</code>
       <sup>
         <a href='#footnote-line-break-1'>[1]</a>
       </sup>
       <br />
-      into multiple lines{' '}
+      Zeilen aufgeteilt
     </td>
     <td>
-      Text broken <code>&lt;br /&gt;&lt;br /&gt;</code>into multiple lines
+      Text in mehrere <code>&lt;br /&gt;&lt;br /&gt;</code>Zeilen aufgeteilt
     </td>
     <td>
-      Text broken <br /> <br /> into multiple lines
+      Text in mehrere <br /> <br /> Zeilen aufgeteilt
     </td>
   </tr>
 </table>
 
 <p id='footnote-line-break-1'>[1]: Notice how there are two blank spaces!</p>
 
-## Emphasis (strong, italic, strikethrough, code, underline)
+## Textformatierung (fett, kursiv, durchgestrichen, Code, Unterstrichen)
 
 <table>
   <tr>
-    <th>Type</th>
+    <th>Typ</th>
     <th>Markdown</th>
     <th>HTML</th>
-    <th>Result</th>
+    <th>Resultat</th>
   </tr>
   <tr>
-    <td>strong</td>
+    <td>Fett</td>
     <td>
-      <code>**text**</code>
+      <code>**Text**</code>
     </td>
     <td>
-      <code>&lt;b&gt;text&lt;/b&gt;</code>
+      <code>&lt;b&gt;Text&lt;/b&gt;</code>
     </td>
     <td>
-      <b>text</b>
-    </td>
-  </tr>
-  <tr>
-    <td>italic</td>
-    <td>
-      <code>*text*</code> or <code>_text_</code>
-    </td>
-    <td>
-      <code>&lt;i&gt;text&lt;/i&gt;</code>
-    </td>
-    <td>
-      <i>text</i>
+      <b>Text</b>
     </td>
   </tr>
   <tr>
-    <td>strong and italic</td>
+    <td>Kursiv</td>
     <td>
-      <code>***text***</code>
+      <code>*Text*</code> or <code>_Text_</code>
     </td>
     <td>
-      <code>&lt;b&gt;&lt;i&gt;text&lt;/i&gt;&lt;/b&gt;</code>
+      <code>&lt;i&gt;Text&lt;/i&gt;</code>
+    </td>
+    <td>
+      <i>Text</i>
+    </td>
+  </tr>
+  <tr>
+    <td>Fett und kursiv</td>
+    <td>
+      <code>***Text***</code>
+    </td>
+    <td>
+      <code>&lt;b&gt;&lt;i&gt;Text&lt;/i&gt;&lt;/b&gt;</code>
     </td>
     <td>
       <b>
-        <i>text</i>
+        <i>Text</i>
       </b>
     </td>
   </tr>
   <tr>
-    <td>strikethrough</td>
+    <td>Durchgestrichen</td>
     <td>
-      <code>~~text~~</code>
+      <code>~~Text~~</code>
     </td>
     <td>
-      <code>&lt;s&gt;text&lt;/s&gt;</code>
+      <code>&lt;s&gt;Text&lt;/s&gt;</code>
     </td>
     <td>
-      <s>text</s>
-    </td>
-  </tr>
-  <tr>
-    <td>code</td>
-    <td>
-      <code>`text`</code>
-    </td>
-    <td>
-      <code>&lt;code&gt;text&lt;/code&gt;</code>
-    </td>
-    <td>
-      <code>text</code>
+      <s>Text</s>
     </td>
   </tr>
   <tr>
-    <td>underline</td>
+    <td>Code</td>
+    <td>
+      <code>`Text`</code>
+    </td>
+    <td>
+      <code>&lt;code&gt;Text&lt;/code&gt;</code>
+    </td>
+    <td>
+      <code>Text</code>
+    </td>
+  </tr>
+  <tr>
+    <td>Unterstrichen</td>
     <td></td>
     <td>
-      <code>&lt;u&gt;text&lt;/u&gt;</code>
+      <code>&lt;u&gt;Text&lt;/u&gt;</code>
     </td>
     <td>
-      <u>text</u>
+      <u>Text</u>
     </td>
   </tr>
 </table>
 
-## Ignoring Markdown formatting
+## Markdown Formatierung ignorieren
 
-Use backslashes to ignore the markdown syntax.
+Benutze Rückstriche, um die Markdown Formatierung zu ignorieren.
 
 <table>
   <tr>
@@ -152,189 +155,190 @@ Use backslashes to ignore the markdown syntax.
     <td>
 
 ```markdown
-This \*text is unaffected\* by markdown
+Dieser \*Text ist nicht beinflusst\* von Markdown
 ```
 
   </td>
     <td>
-      <p>This *text is unaffected* by markdown</p>
+      <p>Dieser *Text ist nicht beinflusst* von Markdown</p>
     </td>
   </tr>
 </table>
 
-## Lists
+## Listen
 
-You can use unordered and ordered lists
+Es gibt zwei Arten von Listen: **Ungeordnete** und **Geordnete** Listen.
 
   <table>
     <tr>
-      <th>Type</th>
+      <th>Typ</th>
       <th>Markdown</th>
       <th>HTML</th>
-      <th>Result</th>
+      <th>Resultat</th>
     </tr>
     <tr>
-      <td>Unordered List</td>
+      <td>Ungeordnete Listen</td>
       <td>
 
 ```markdown
-some text...
+Text...
 
-- First unordered item
-- Another item
-- Last item
+- Erstes ungeordnetes Element
+- Ein weiteres Element
+- Letztes Element
 
-Text outside list
+Text außerhalb der Liste
 ```
 
 </td>
       <td>
 
 ```html
-some text...
+Text...
 <ul>
-  <li>First unordered item</li>
-  <li>Another item</li>
-  <li>Last item</li>
+  <li>Erstes ungeordnetes Element</li>
+  <li>Ein weiteres Element</li>
+  <li>Letztes Element</li>
 </ul>
-Text outside list
+Text außerhalb der Liste
 ```
 
   </td>
       <td>
-        <p>some text...</p>
+        <p>Text...</p>
         <ul>
-          <li>First unordered list item</li>
-          <li>Another item</li>
-          <li>Last item</li>
+          <li>Erstes ungeordnetes Element</li>
+          <li>Ein weiteres Element</li>
+          <li>Letztes Element</li>
         </ul>
-        <p>Text outside list</p>
+        <p>Text außerhalb der Liste</p>
       </td>
     </tr>
     <tr>
-      <td>Ordered List</td>
+      <td>Geordnete Listen</td>
 <td>
 
 ```markdown
-some text...
+Text...
 
-1. First ordered item
-2. Another item
-3. Last item
+1. Erstes geordnetes Element
+2. Ein weiteres Element
+3. Letztes Element
 
-Text outside list
+Text außerhalb der Liste
 ```
 
 </td>
       <td>
 
 ```html
-some text...
+Text...
 <ol>
-  <li>First ordered list item</li>
-  <li>Another item</li>
-  <li>Last item</li>
+  <li>Erstes geordnetes Element</li>
+  <li>Ein weiteres Element</li>
+  <li>Letztes Element</li>
 </ol>
-Text outside list
+Text außerhalb der Liste
 ```
 
   </td>
       <td>
-        <p>some text...</p>
+        <p>Text...</p>
         <ol>
-          <li>First ordered list item</li>
-          <li>Another item</li>
-          <li>Last item</li>
+          <li>Erstes geordnetes Element</li>
+          <li>Ein weiteres Element</li>
+          <li>Letztes ElementLetztes Element</li>
         </ol>
-        <p>Text outside list</p>
+        <p>Text außerhalb der Liste</p>
       </td>  
     </tr>
   </table>
 
 :::caution Achtung
-To exit a list in markdown you have to add a blank line between the list and the following content or add two to blank spaces at the end of the last list item
+Um eine Liste in Markdown zu beenden, ist es es notwending eine leere Zeile zwischen der Liste und dem folgenden Inhalt oder zwei Leerzeichen am Ende des letzten Listenelements einzufügen.
 :::
 
 :::info Info
-Unordered list in markdown can use asterisks (<code>\*</code>), minuses (<code>-</code>) or pluses (<code>+</code>).
+Ungeordnete Listen in Markdown können Sterne (<code>\*</code>), Minus-Symbole (<code>-</code>) oder Plus-Symbole (<code>+</code>) verwenden.
 :::
 
-## Tables
+## Tabellen
 
   <table>
     <tr>
       <th>Markdown</th>
       <th>HTML</th>
-      <th>Result</th>
+      <th>Resultat</th>
     </tr>
     <tr>
       <td>
 
 ```markdown
-some text
+Text
 
-| Heading 1 | Heading 2 |
-| --------- | :-------: |
-| Item 1    |  Item 2   |
-| Item 3    |  Item 4   |
+| Überschrift 1 | Überschrift 2 |
+| ------------- | :-----------: |
+| Element 1     |   Element 2   |
+| Element 3     |   Element 4   |
 
-Text outside table
+Text außerhalb der Tabelle
 ```
 
 </td>
   <td>
 
 ```html
-some text...
+Text
 <table>
   <tr>
-    <th>Heading 1</th>
-    <th style="text-align:center">Heading 2</th>
+    <th>Überschrift 1</th>
+    <th style="text-align:center">Überschrift 2</th>
   </tr>
   <tr>
-    <td>Item 1</td>
-    <td style="text-align:center">Item 2</td>
+    <td>Element 1</td>
+    <td style="text-align:center">Element 2</td>
   </tr>
   <tr>
-    <td>Item 3</td>
-    <td style="text-align:center">Item 4</td>
+    <td>Element 3</td>
+    <td style="text-align:center">Element 4</td>
   </tr>
 </table>
-Text outside table
+Text außerhalb der Tabelle
 ```
 
 </td>
       
       <td>
-some text
+Text
 
-| Heading 1 | Heading 2 |
-| --------- | :-------: |
-| Item 1    |  Item 2   |
-| Item 3    |  Item 4   |
+| Überschrift 1 | Überschrift 2 |
+| ------------- | :-----------: |
+| Element 1     |   Element 2   |
+| Element 3     |   Element 4   |
 
-Text outside table
+Text außerhalb der Tabelle
 
 </td>
 </tr>
 
   </table>
 
-:::info Info
-Use the following syntax below the heading to align items in a markdown table:
+:::tip Tipp
+Benutze die folgendene Syntax unterhalb der Überschrift, um Elemente in einer Markdown Tabelle auszurichten:
 
-- left (| :------- |) is optional as it is identical to | ------- |
-- center (| :-------: |)
-- right (| -------: |)
+- Links (`| :------- |`) ist optional, da es identisch zu `| ------- |` ist
+- Mitte (`| :-------: |`)
+- Rechts (`| -------: |`)
 
 :::
 
 ## Bilder
 
-<p>
-  Display images by adding <code>!</code>, wrapping the alt text inside <code>[]</code> and then wrapping the link for the image in parentheses{' '}
-  <code>()</code>.
-</p>
+Bilder kann man mit der Syntax `![Alt Text](www.link-to-image.com)` hinzufügen.
+
+:::info Info
+Der Alt Text wird angezeigt, wenn das Bild aus irgendeinem Grund nicht geladen werden kann, und dient auch der Barrierefreiheit für Sehbehinderte.
+:::
 
   <table>
     <tr>
@@ -357,7 +361,6 @@ Use the following syntax below the heading to align items in a markdown table:
 ```
 
 </td>
-      // Result -->
       <td>
         <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Markdown.png" alt="md" />
       </td>
@@ -366,7 +369,7 @@ Use the following syntax below the heading to align items in a markdown table:
 
 ## CSS
 
-Use inline css in combination with html to style an element.
+Benutze inline Css in Kombination mit HTML, um ein Element zu stylen.
 
 <table>
   <tr>
@@ -377,14 +380,14 @@ Use inline css in combination with html to style an element.
     <td>
 
 ```markdown
-This text is unaffected
+Dieser Text ist nicht beinflusst von CSS
 
-<p style="color: lightblue; font-weight: 700">I am blue</p>
+<p style="color: lightblue; font-weight: 700">Ich bin blau</p>
 ```
 
 </td>
     <td>
-      <p style={{color: "lightblue", fontWeight: 700}}>I am blue</p>
+      <p style={{color: "lightblue", fontWeight: 700}}>Ich bin blau</p>
     </td>
   </tr>
 </table>
@@ -395,8 +398,8 @@ Using html elements may overwrite the default styling!
 
 ## Formeln (LaTeX)
 
-Repeatio uses LaTeX to render mathematical functions.  
-Write the function inside two dollar signs (`$`).
+Repeatio benutzt LaTeX, um Formeln zu rendern.
+Schreibe die Funktion zwischen zwei Dollarzeichen (`$`).
 
 <table>
   <tr>
