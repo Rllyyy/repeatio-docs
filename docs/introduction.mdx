@@ -3,58 +3,162 @@ sidebar_position: 1
 slug: /
 ---
 
-import Logo from "/src/components/Logo/index.tsx"
+import Logo from "/src/components/Logo/index.tsx";
+import Image from "../static/img/3-mobile.png";
+import VideoTutorial from "/src/components/VideoTutorial/index.tsx";
 
-# Introduction
+# Was ist Repeatio?
 
-<Logo />
+<img src={Image} width={550} style={{ display: "block", marginInline: "auto", marginBottom: "40px" }} />
 
-![](../static/img/3-mobile.png)
+<p>
 
-## Getting Started
+Repeatio ist eine **kostenlose Open Source Plattform**, die das Lernen für Prüfungen durch interaktive Lernmöglichkeiten vereinfacht.
+Bereite dich durch ein gezieltes Training auf Prüfungen vor und verbessere deine Noten.
 
-Get started by **creating a new site**.
+Diese Dokumentation führt durch die verschiedenen Funktionen von Repeatio.  
+Um stattdessen direkt mit dem **Lernen anzufangen, besuche [repeatio.de](https://repeatio.de)**.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+</p>
 
-## Video Tutorial
+<p>Repeatio bereitet dich auf folgende Fragetypen vor:</p>
 
-import VideoTutorial from "/src/components/VideoTutorial/index.tsx"
+<ul>
+  <li>
+    <strong>Multiple Choice:</strong> Wähle die richtige Antwort aus.
+  </li>
+  <li>
+    <strong>Multiple Response:</strong> Wähle mehrere richtige Antworten aus.
+  </li>
+  <li>
+    <strong>Lückentext:</strong> Fülle die Lücken im Text aus.
+  </li>
+  <li>
+    <strong>Extended Match:</strong> Ordne die Antwortenmöglichkeiten richtig zu.
+  </li>
+</ul>
+
+:::caution Wichtige Hinweise
+
+- Das Projekt befined sich in einem frühen Entwicklungsstadium, folglich können Fehler auftreten!
+- Das **Leeren des Browser-Cache** (z.B. vor einer Prüfung) führt zum **Verlust der Daten**!
+- Einige Features / UI-Elemente funktionieren noch nicht (z.B. Modulfortschritt, Statistiken, etc. pp.)!
+
+:::
+
+:::danger Achtung
+
+Die Plattform ist nicht für die Durchführung von Prüfungen geeignet, da die Antworten unverschlüsselt lokal gespeichert werden. Die Plattform ist ausschließlich für das Vorbereiten auf Prüfungen gedacht.
+
+:::
+
+## Video-Tutorial
+
+Keine Lust zu lesen? In diesem Video werden kurz die wichtigsten Funktionen von Repeatio erklärt.
 
 <VideoTutorial />
 
-In diesem kurzen Video Tutorial werden die wichtigsten Funktionen von repeatio erläutert.
+## Erste Schritte
 
-### What you'll need
+Um mit dem Lernen zu beginnen, muss auf der [Plattform](https://repeatio.de) zunächst ein **[Modul erstellt](./module/create-module)** oder **[importiert](/module/import-module)** werden.  
+Danach können in dem Modul **[Fragen hinzugefügt](./questions/add-question)** werden, die dann später in **[verschienden Modi](./practice-modes/modes)** interaktiv abgefragt werden können.
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+## Technische Vorraussetzungen
 
-## Generate a new site
+Repeatio unterstützt alle gängigen Endgeräte und Browser. Auf Apple Systemen kann es jedoch zu Anzeige Problemen kommen, da die Website nicht für Safari bzw. WebKit optimiert ist. Es wir empfohlen Firefox oder einen Chromium Browser (Google Chrome, Brave, Opera, Vivaldi, ...) zu nutzen. Achten Sie darauf ihren Browser auf dem neusten Stand zu halten.
+Damit die Website funktioniert, muss JavaScript aktiviert sein.
 
-Generate a new Docusaurus site using the **classic template**.
+## Technische Besonderheit
 
-The classic template will automatically be added to your project after you run the command:
+Alle Daten (Module, gespeicherte Fragen, Einstellungen, etc. pp.) werden ausschließlich lokal im Browser gespeichert. Es werden keine Daten an einen Server gesendet. Sollte der Cache des Browsers gelöscht werden, **gehen alle Daten verloren**! Die Daten können über die Export Funktion als JSON Datei gespeichert werden.
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+<!---
+## Programmiersprache und Technik
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+Repeatio nutzt folgende Technologien:
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Cypress](https://www.cypress.io/)
+- [yarn](https://yarnpkg.com/)
+- [Netlify](https://www.netlify.com/)
+- Alle verwendeten externen Bibliotheken finden sich [hier](https://github.com/Rllyyy/repeatio/blob/main/package.json).
 
-## Start your site
+-->
 
-Run the development server:
+## Über den Autor und das Projekt
 
-```bash
-cd my-website
-npm run start
-```
+Das Projekt wurde 2022 von Niklas Fischer in eigener Entwicklung erstellt und befindet sich seitdem in aktiver Entwicklung. Das Projekt ist Open Source. Der gesamte Quellcode findet sich auf GitHub. Gehostet wird die Website auf Netlify.
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+## Lizenz
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+Das Projekt nutzt die GNU GENERAL PUBLIC LICENSE Version 3.0. Diese Lizenz erlaubt es jedem, das Projekt zu kopieren, zu modifizieren und zu verbreiten. Das Projekt darf auch kommerziell genutzt werden. Die einzige Bedingung ist, dass die Lizenz beibehalten wird und der Quellcode öffentlich zugänglich ist. Bevor das Projekt kommerziell genutzt wird, sollte die [Lizenz](https://github.com/Rllyyy/repeatio/blob/main/LICENSE) gelesen werden.
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+## Versionen
+
+General wird empfohlen, die neuste stabile Version zu nutzen. Die neuste Version ist immer auf der Webseite (repeatio.de) verfügbar. Instabile Versionen sind nicht ausführlich getestet und können Fehler enthalten. Beachte, dass Daten im lokalen Speicher gespeichert werden und daher nicht zwischen den verschiedenen Webseiten ausgetauscht werden. Exportiere deine Daten, wenn du zwischen den Versionen wechselst. Dieses Problem tritt nicht auf, wenn du nur repeatio.de nutzt.
+
+<table>
+  <thead>
+    <tr>
+      <th>Version</th>
+      <th>Releasedatum</th>
+      <th>Versionshinweis</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>v0.6</b></td>
+      <td>17.02.2024</td>
+      <td><a href="https://github.com/Rllyyy/repeatio/releases/tag/v0.6">Versionshinweise</a></td>
+      <td><a href="https://release-v0-6--repeatio.netlify.app/">Webseite</a></td>
+    </tr>
+    <tr>
+      <td>v0.5</td>
+      <td>11.08.2023</td>
+      <td><a href="https://github.com/Rllyyy/repeatio/releases/tag/v0.5">Versionshinweise</a></td>
+      <td><a href="https://release-v0-5--repeatio.netlify.app/">Webseite</a></td>
+    </tr>
+    <tr>
+      <td>v0.4</td>
+      <td>08.04.2023</td>
+      <td><a href="https://github.com/Rllyyy/repeatio/releases/tag/v0.4">Versionshinweise</a></td>
+      <td><a href="https://release-v0-4--repeatio.netlify.app/">Webseite</a></td>
+    </tr>
+    <tr>
+      <td>v0.3</td>
+      <td>20.10.2022</td>
+      <td><a href="https://github.com/Rllyyy/repeatio/releases/tag/v0.3">Versionshinweise</a></td>
+      <td><a href="https://release-v0-3--repeatio.netlify.app/">Webseite</a></td>
+    </tr>
+    <tr>
+      <td>v0.2</td>
+      <td>03.06.2022</td>
+      <td><a href="https://github.com/Rllyyy/repeatio/releases/tag/v0.2">Versionshinweise</a></td>
+      <td><a href="https://release-v0-2--repeatio.netlify.app/">Webseite</a></td>
+    </tr>
+    <tr>
+      <td>v0.1</td>
+      <td>01.02.2022</td>
+      <td><a href="https://github.com/Rllyyy/repeatio/releases/tag/v0.1">Versionshinweise</a></td>
+      <td><a href="https://release-v0-1--repeatio.netlify.app/">Webseite</a></td>
+    </tr>
+  </tbody>
+
+</table>
+
+## Gesetzliche Vorschriften
+
+Der Autor schließt jegliche Haftung für Schäden, die direkt oder indirekt aus der Nutzung der Plattform entstehen, aus. Für die erstellten Inhalte sind außschließlich die Nutzer verantwortlich.
+
+Die Anwendung entspricht den geltenden Datenschutzbestimmungen, insbesondere der Datenschutz-Grundverordnung (DSGVO). Eine weitergabe von Daten an Dritte erfolgt nicht. Es werden ausschließlich technische Cookies zum speichern von Modulen und Einstellungen lokal gespeichert.
+Weitere Informationen zur Datenerhebung, -verarbeitung und -speicherung finden sich in der [Datenschutzerklärung](https://repeatio.de/privacy).
+
+Angaben gem. § 5 TMG finden sich im [Impressum](http://repeatio.de/legal-notice)
+
+## Kontakt
+
+Bei Fragen, Anregungen oder Problemen, schreiben Sie eine E-Mail an [contact@repeatio.de](mailto:contact@repeatio.de) oder nutzen Sie [GitHub](https://github.com/Rllyyy/repeatio).

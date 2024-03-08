@@ -4,9 +4,15 @@
  * work well for content-centric websites.
  */
 
+/* TODO add author
+ https://github.com/cypress-io/cypress-documentation/blob/main/src/css/custom.scss
+ 
+ */
+
 /* You can override the default Infima variables here. */
-/* :root {
-  --ifm-color-primary: #2e8555;
+:root {
+  /* --ifm-container-width-xl: 1400px; */
+  /* --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
   --ifm-color-primary-darkest: #205d3b;
@@ -14,8 +20,8 @@
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-} */
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1); */
+}
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 /* [data-theme="dark"] {
@@ -30,9 +36,18 @@
 } */
 @import url(fragments.css);
 
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --ifm-font-size-base: 18px;
-  --ifm-code-font-size: 90%;
+  /* --ifm-code-font-size: 90%; */
+  --ifm-font-color-base: var(--ifm-color-gray-800);
   --ifm-background-color: #fff;
   --ifm-color-primary: var(--nebula-600);
   /* --ifm-footer-background-color: var(--grey-100); */
@@ -43,6 +58,7 @@
 /* [data-theme='dark'] */
 html[data-theme="dark"] {
   --ifm-color-primary: var(--nebula-500);
+  --ifm-font-color-base: var(--ifm-color-gray-400);
   --ifm-font-base-color: #dee0f2;
   --ifm-navbar-link-hover-color: #8b9dff;
   --ifm-link-color: #8b9dff;
@@ -66,4 +82,58 @@ html[data-theme="dark"] {
 
 html[data-theme="dark"] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+li::marker {
+  position: relative;
+}
+
+li {
+  position: relative;
+}
+
+/* li:before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  background-color: red;
+  z-index: -1;
+  display: inline-block;
+  width: 16px;
+  height: 100%;
+  border-radius: 5px;
+} */
+
+li::marker {
+  font-weight: 500;
+}
+
+.admonitionHeading_node_modules-\@docusaurus-theme-classic-lib-theme-Admonition-styles-module {
+  text-transform: initial !important;
+}
+
+/* Css for print */
+@media print {
+  :root {
+    --ifm-font-size-base: 16px;
+  }
+
+  .theme-admonition,
+  .breadcrumbs__item,
+  code {
+    print-color-adjust: exact;
+  }
+
+  .theme-admonition,
+  .alert {
+    break-inside: avoid;
+  }
+
+  .theme-edit-this-page {
+    display: none;
+  }
+
+  .col {
+    padding: 0;
+  }
 }

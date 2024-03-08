@@ -3,29 +3,60 @@ sidebar_position: 1
 sidebar_label: Frage Typen
 ---
 
+import MultipleChoice from "../static/img/multiple-choice.png";
+import MultipleResponse from "../static/img/multiple-response.png";
+import GapText from "../static/img/gap-text.png";
+import ExtendedMatch from "../static/img/extended-match.png";
+
 # Frage Typen
 
-Repeatio unterstützt Fragen vom Typen [Multiple-Choice](#multiple-choice), [Multiple-Response](#multiple-response), [Lückentext](#lückentext) und [erweiterete Zuordnungsaufgabe](#erweiterte-zuordnungsaufgabe).
+:::info In diesem Modul erfährt du:
 
-:::info Info
-In dem Modul Question Types werden alle Aufgabentypen interaktiv vorgestellt.
+- Welche Fragetypen es gibt
+- Wie sich die Fragetypen voneinander unterscheiden
+
+:::
+
+Repeatio unterstützt Fragen vom Typen
+
+- [Multiple-Choice](#multiple-choice),
+- [Multiple-Response](#multiple-response),
+- [Lückentext](#lückentext-gap-text) und
+- [erweiterete Zuordnungsaufgabe](#erweiterte-zuordnungsaufgabe-extended-match).
+
+:::tip Tipp
+
+In dem Modul `Question Types` auf der [Website](https://www.repeatio.de) werden alle Aufgabentypen interaktiv vorgestellt.
+
 :::
 
 ## Multiple-Choice
 
 Fragen vom Typen Multiple-Choice haben **genau eine** korrekte Antwort und sind durch einen Kreis (`◯`) vor jeder Option gekennzeichnet.
 
+<img src={MultipleChoice} width={450} style={{ display: "block" }} />
+
 ## Multiple-Response
 
 Multiple-Response-Fragen können **mehrere** richtige Antworten enthalten und sind durch ein Quadrat (`▢`) vor jeder Option gekennzeichnet.
 
-## Lückentext
+<img src={MultipleResponse} width={480} style={{ display: "block" }} />
+
+## Lückentext (Gap Text)
 
 Bei Lückentextaufgaben müssen die fehlenden Wörter eingetragen werden.
+Achte beim Ausfüllen auf die richtige Rechtschreibung.
 
-<p style={{ color: "red" }}>erfahre, wie man diesen Fragetypen editiert</p>
+**Beispiel:**
 
-## Erweiterte Zuordnungsaufgabe
+<img src={GapText} width={480} style={{ display: "block" }} />
 
-Bei erweiterten Zuordnungsaufgaben müssen die Elemente der beiden Seiten verbunden werden.
-Eine Verbindung entsteht durch einen Klick auf einen Kreis.
+## Erweiterte Zuordnungsaufgabe (Extended Match)
+
+Bei erweiterten Zuordnungsaufgaben müssen die Elemente der beiden Seiten verbunden werden.  
+Klick dazu auf einen Kreis auf der einen Seite und dann auf einen Kreis auf der anderen Seite.
+Verbindugen löscht man durch einen Klick auf das Kreuz in der Mitte der Verbindung.
+Ein Verbinden durch Ziehen ist zurzeit noch nicht möglich.  
+Beachte, dass eine Option **mehrere Verbindungen** haben kann.
+
+<img src={ExtendedMatch} width={580} style={{ display: "block" }} />

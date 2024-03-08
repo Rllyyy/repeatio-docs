@@ -5,11 +5,16 @@ sidebar_label: Styling
 
 # Styling
 
+:::info In diesem Kapitel lernst du:
+
+- Wie man Fragen formatiert
+- Wie man Bilder und Formeln hinzufügt
+
+:::
+
 Repeatio unterstützt die Gestaltung mit `Markdown` und `HTML` für die folgenden Elemente: **Titel**, **Hilfe** und **Antwortmöglichkeiten**.
 
-:::tip Tipp
-Versuch immer die elemente zunächst mit Markdown zu stylen und benutzt HTML nur, wenn Markdown nicht den gewünschten Effekt erzielt. Dies ist zum Beispiel der Fall, wenn man CSS verwenden möchte, das Standardstyling überschreiben will oder mehrere Zeilenumbrüche haben möchtest.
-:::
+<!--
 
 ## Zeilenumbrüche
 
@@ -19,45 +24,51 @@ Versuch immer die elemente zunächst mit Markdown zu stylen und benutzt HTML nur
 </p>
 
 <table>
-  <tr>
-    <th>Typ</th>
-    <th>Markdown</th>
-    <th>HTML</th>
-    <th>Resultat</th>
-  </tr>
-  <tr>
-    <td>Einzelner Zeilenumbruch</td>
-    <td>
-      Oberer Text <br /> Neue Zeile
-    </td>
-    <td>
-      Oberer Text <code>&lt;br /&gt;</code> Neue Zeile
-    </td>
-    <td>
-      Oberer Text <br />
-      Neue Zeile
-    </td>
-  </tr>
-  <tr>
-    <td>Mehrere Zeilenumbrüche</td>
-    <td>
-      Text in mehrere<code>&ensp;</code>
-      <sup>
-        <a href='#footnote-line-break-1'>[1]</a>
-      </sup>
-      <br />
-      Zeilen aufgeteilt
-    </td>
-    <td>
-      Text in mehrere <code>&lt;br /&gt;&lt;br /&gt;</code>Zeilen aufgeteilt
-    </td>
-    <td>
-      Text in mehrere <br /> <br /> Zeilen aufgeteilt
-    </td>
-  </tr>
+  <thead>
+    <tr>
+      <th>Typ</th>
+      <th>Markdown</th>
+      <th>HTML</th>
+      <th>Resultat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Einzelner Zeilenumbruch</td>
+      <td>
+        Oberer Text <br /> Neue Zeile
+      </td>
+      <td>
+        Oberer Text <code>&lt;br /&gt;</code> Neue Zeile
+      </td>
+      <td>
+        Oberer Text <br />
+        Neue Zeile
+      </td>
+    </tr>
+    <tr>
+      <td>Mehrere Zeilenumbrüche</td>
+      <td>
+        Text in mehrere<code>&ensp;</code>
+        <sup>
+          <a href='#footnote-line-break-1'>[1]</a>
+        </sup>
+        <br />
+        Zeilen aufgeteilt
+      </td>
+      <td>
+        Text in mehrere <code>&lt;br /&gt;&lt;br /&gt;</code>Zeilen aufgeteilt
+      </td>
+      <td>
+        Text in mehrere <br /> <br /> Zeilen aufgeteilt
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p id='footnote-line-break-1'>[1]: Notice how there are two blank spaces!</p>
+<p id='footnote-line-break-1'>[1]: Beachte die zwei Leerzeichen!</p>
+
+-->
 
 ## Textformatierung (fett, kursiv, durchgestrichen, Code, Unterstrichen)
 
@@ -142,6 +153,7 @@ Versuch immer die elemente zunächst mit Markdown zu stylen und benutzt HTML nur
   </tr>
 </table>
 
+<!--
 ## Markdown Formatierung ignorieren
 
 Benutze Rückstriche, um die Markdown Formatierung zu ignorieren.
@@ -165,6 +177,9 @@ Dieser \*Text ist nicht beinflusst\* von Markdown
   </tr>
 </table>
 
+-->
+
+<!---
 ## Listen
 
 Es gibt zwei Arten von Listen: **Ungeordnete** und **Geordnete** Listen.
@@ -250,7 +265,7 @@ Text außerhalb der Liste
           <li>Letztes ElementLetztes Element</li>
         </ol>
         <p>Text außerhalb der Liste</p>
-      </td>  
+      </td>
     </tr>
   </table>
 
@@ -262,6 +277,9 @@ Um eine Liste in Markdown zu beenden, ist es es notwending eine leere Zeile zwis
 Ungeordnete Listen in Markdown können Sterne (<code>\*</code>), Minus-Symbole (<code>-</code>) oder Plus-Symbole (<code>+</code>) verwenden.
 :::
 
+-->
+
+<!---
 ## Tabellen
 
   <table>
@@ -332,6 +350,8 @@ Benutze die folgendene Syntax unterhalb der Überschrift, um Elemente in einer M
 
 :::
 
+-->
+
 ## Bilder
 
 Bilder kann man mit der Syntax `![Alt Text](www.link-to-image.com)` hinzufügen.
@@ -349,20 +369,22 @@ Der Alt Text wird angezeigt, wenn das Bild aus irgendeinem Grund nicht geladen w
     <tr>
       <td>
 
+<!-- Test -->
+
 ```markdown
-![md](https://upload.wikimedia.org/wikipedia/commons/d/d9/Markdown.png)
+![md](link-to-image)
 ```
 
 </td>
   <td>
 
 ```html
-<img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Markdown.png" alt="md" />
+<img src="link-to-image" alt="md" />
 ```
 
 </td>
       <td>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Markdown.png" alt="md" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Markdown.png" alt="md" style={{height: "48px"}} />
       </td>
     </tr>
   </table>
@@ -382,12 +404,13 @@ Benutze inline CSS in Kombination mit HTML, um ein Element zu stylen.
 ```markdown
 Dieser Text ist nicht beinflusst von CSS
 
-<p style="color: lightblue; font-weight: 700">Ich bin blau</p>
+<p style="color: lightblue; font-weight: 700">Dieser Text ist blau</p>
 ```
 
 </td>
     <td>
-      <p style={{color: "lightblue", fontWeight: 700}}>Ich bin blau</p>
+      <p>Dieser Text ist nicht beinflusst von CSS</p>
+      <p style={{color: "lightblue", fontWeight: 700}}>Dieser Text ist blau</p>
     </td>
   </tr>
 </table>

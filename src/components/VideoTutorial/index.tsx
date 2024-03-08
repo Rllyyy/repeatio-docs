@@ -1,5 +1,4 @@
 import React from "react";
-//import thumbnail from "../../../static/img/youtube-thumbnail.jpg";
 
 export default function VideoTutorial() {
   return (
@@ -30,6 +29,7 @@ export default function VideoTutorial() {
           fontSize: "large",
           fontWeight: 500,
           color: "white",
+          printColorAdjust: "exact",
         }}
       >
         Watch On YouTube

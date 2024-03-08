@@ -1,5 +1,6 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
+// TODO https://docusaurus.io/blog/releases/3.0#esm-ts-configs
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
@@ -8,8 +9,8 @@ const katex = require("rehype-katex");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
+  title: "Repeatio - Docs",
+  tagline: "These are the docs for Repeatio",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -80,14 +81,19 @@ const config = {
           src: "img/logo.svg",
         },
         items: [
-          {
-            type: "docSidebar",
-            sidebarId: "tutorialSidebar",
-            position: "right",
-            label: "Tutorial",
-          },
-          /* //TODO Uncomment this if you want to link the blog */
+          // {
+          //   type: "docSidebar",
+          //   sidebarId: "tutorialSidebar",
+          //   position: "right",
+          //   label: "Tutorial",
+          // },
+          /* Uncomment this if you want to link the blog */
           /* { to: "/blog", label: "Blog", position: "left" }, */
+          {
+            href: "https://www.repeatio.de",
+            label: "Start Learning",
+            position: "right",
+          },
           {
             href: "https://github.com/Rllyyy/repeatio-docs",
             label: "GitHub",
@@ -103,7 +109,7 @@ const config = {
             items: [
               {
                 label: "Tutorial",
-                to: "/docs/intro",
+                to: "/",
               },
             ],
           },
@@ -111,16 +117,12 @@ const config = {
             title: "Community",
             items: [
               {
-                label: "GitHub",
+                label: "GitHub - Repeatio",
                 href: "https://github.com/Rllyyy/repeatio",
               },
               {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
+                label: "GitHub - Docs ",
+                href: "https://github.com/Rllyyy/repeatio-docs",
               },
             ],
           },
@@ -128,12 +130,8 @@ const config = {
             title: "More",
             items: [
               {
-                label: "Blog",
-                to: "/blog",
-              },
-              {
-                label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+                label: "Personal Website",
+                href: "https://www.niklasfischer.dev",
               },
             ],
           },
