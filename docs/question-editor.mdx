@@ -1,7 +1,9 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 sidebar_label: Fragen-Editor
 ---
+
+import QuestionEditor from "../static/img/question-editor.png";
 
 # Fragen-Editor
 
@@ -13,39 +15,146 @@ sidebar_label: Fragen-Editor
 
 :::
 
-Mit dem Fragen-Editor können Fragen [erstellt](./questions/add-question) und [bearbeitet](./questions/edit-question) werden.  
-Die mit einem roten Sternchen markierten Felder sind Pflichtfelder.  
-Alle anderen Felder sind optional.
+Mit dem Fragen-Editor können Fragen [erstellt](./questions/add-question) und [bearbeitet](./questions/edit-question) werden.
 
 ## Elemente
+
+Die mit einem roten Sternchen markierten Felder sind Pflichtfelder. Alle anderen Felder sind optional.  
+Die Felder **Title**, **Help** und **Answer** können mit MarkDown [gestaltet](#styling) werden.
+Falls Änderungen nicht gefallen, kann die Frage mit dem Button **Abbrechen** zurückgesetzt werden.
+
+<img src={QuestionEditor} width={680} style={{ display: "block", marginBottom: "40px", marginInline: "auto" }} />
 
 ### ID
 
 Die ID ist eine eindeutige Kennung für die Frage. Sie muss **einzigartig** in dem Modul sein und darf **keine Leer- oder Sonderzeichen** (#, /, !, ...) enthalten. Verwendet anstelle eines Leerzeichens einen Binde- oder Unterstrich.
 
-### Titel
+### Title (Titel)
 
 Formuliere den Titel so, dass er die Fragestellung klar und präzise wiedergibt. Im Titel kann MarkDown verwendetet werden, um den Text zu formatieren, Bilder einzufügen oder Tabellen zu erstellen.
 
-### Points
+### Points (Punkte)
 
 Gib die Anzahl der Punkte an, die die Frage wert ist.
 
-### Help
+### Help (Hilfe)
 
-Im Help-Text kannst du zusätzliche Informationen zur Fragestellung oder zur Beantwortung der Frage hinzufügen. Der Help-Text wird unterhalb der Fragestellung angezeigt. Auch im Help-Text kann MarkDown verwendetet werden, um den Text zu formatieren, Bilder einzufügen oder Tabellen zu erstellen.
+Im Help-Text können zusätzliche Informationen zur Fragestellung oder zur Beantwortung der Frage hinzufügt werden. Der Help-Text wird unterhalb der Fragestellung angezeigt. Auch im Help-Text kann MarkDown verwendetet werden, um den Text zu formatieren, Bilder einzufügen oder Tabellen zu erstellen.
 
-### Answer
+### Type (Typ)
 
-Im Antwort-Text gibst du die korrekte Antwort auf die Frage ein. Der Antwort-Text wird unterhalb der Fragestellung und des Help-Textes angezeigt. Auch im Antwort-Text kann MarkDown verwendetet werden, um den Text zu formatieren, Bilder einzufügen oder Tabellen zu erstellen.
+Wähle den Typ der Frage aus. Aktuell gibt vier verschiedene Typen: **[Multiple Choice](/question-types#multiple-choice)**, **[Multiple Response](/question-types#multiple-response)**, **[Gap Text (Lückentext)](/question-types#lückentext-gap-text)** und **[Extended-Match (Erweiterte Zuordnung)](/question-types#erweiterte-zuordnungsaufgabe-extended-match)**.
+
+### Answer (Antwort)
+
+In diesem Bereich wird die korrekte Lösung der Frage eingetragen. Wähle dazu zunächst den Typ der Antwort aus.
+Auch im Antwort-Text kann MarkDown verwendetet werden, um den Text zu formatieren, Bilder einzufügen oder Tabellen zu erstellen.
+
+#### Multiple Choice
+
+Mit dem Plus-Button (`➕`) können weitere Antwortmöglichkeiten hinzugefügt werden.  
+Klick zum Löschen einer Antwortmöglickeit auf diese und dann auf den Minus-Button (`➖`).  
+Ist beim Klick auf den Minus-Button keine Antwortmöglichkeit ausgewählt, wird die letzte Antwortmöglichkeit gelöscht.
+Wähle die korrekte Antwort durch einen Klick auf den Kreis aus. Falls mehrere Antwortmöglichkeiten korrekt sind, wähle stattdessen den Typ Multiple Response.
+
+#### Multiple Response
+
+Mit dem Plus-Button (`➕`) können weitere Antwortmöglichkeiten hinzugefügt werden.  
+Klick zum Löschen einer Antwortmöglickeit auf diese und dann auf den Minus-Button (`➖`).  
+Ist beim Klick auf den Minus-Button keine Antwortmöglichkeit ausgewählt, wird die letzte Antwortmöglichkeit gelöscht.
+Wähle die korrekten Antworten durch einen Klick auf die Rechtecke aus. Falls nur eine Antwortmöglichkeiten korrekt ist, wähle stattdessen den Typ Multiple Choice.
+
+#### Gap Text
+
+Beim Lückentext muss die korrekte Antwort zwischen zwei rechteckigen Klammern (`[ ]`) eingetragen werden.
+Diese können über die Tastatur oder mit dem Plus-Button (`➕`) hinzugefügt werden.  
+Sind mehrere Antworten möglich (z.B. verschiedene Synonyme oder Schreibweisen), können diese durch ein Semicolon (`;`) getrennt werden (Beispiel: `[Antwort1; Antwort2; Antwort3]`).
+Lücken können per Tastatur oder durch einen Klick auf das Minus-Button (`➖`) gelöscht werden, wenn der Text markiert wurde.
+
+:::tip Tipp
+Mit MarkDown ist es möglich, Lücken in Tabellen oder Listen zu erstellen.
+:::
+
+#### Extended-Match
+
+Nutze zum hinzufügen neuer Optionen auf jeweiligen Seite den Plus-Button (`➕`) in der Antwort.  
+Verbinde richtige Optionen durch einen Klick auf den Kreis neben der Option.  
+Optionen und Verbindungen können durch einen Klick auf den Kreuz-Symbol (`✖`) gelöscht werden.
 
 ## Styling
 
 Repeatio unterstützt die Gestaltung mit `Markdown` und `HTML` für die folgenden Elemente: **Titel**, **Hilfe** und **Antwortmöglichkeiten**.
 
-<!--
+### Textformatierung (fett, kursiv, durchgestrichen, Code, Unterstrichen)
 
-## Zeilenumbrüche
+<table>
+  <tr>
+    <th>Typ</th>
+    <th>Markdown</th>
+    <th>HTML</th>
+    <th>Resultat</th>
+  </tr>
+  <tr>
+    <td>Fett</td>
+    <td>
+      <code>**Text**</code>
+    </td>
+    <td>
+      <code>&lt;b&gt;Text&lt;/b&gt;</code>
+    </td>
+    <td>
+      <b>Text</b>
+    </td>
+  </tr>
+  <tr>
+    <td>Kursiv</td>
+    <td>
+      <code>*Text*</code> or <code>_Text_</code>
+    </td>
+    <td>
+      <code>&lt;i&gt;Text&lt;/i&gt;</code>
+    </td>
+    <td>
+      <i>Text</i>
+    </td>
+  </tr>
+  <tr>
+    <td>Durchgestrichen</td>
+    <td>
+      <code>~~Text~~</code>
+    </td>
+    <td>
+      <code>&lt;s&gt;Text&lt;/s&gt;</code>
+    </td>
+    <td>
+      <s>Text</s>
+    </td>
+  </tr>
+  <tr>
+    <td>Code</td>
+    <td>
+      <code>`Text`</code>
+    </td>
+    <td>
+      <code>&lt;code&gt;Text&lt;/code&gt;</code>
+    </td>
+    <td>
+      <code>Text</code>
+    </td>
+  </tr>
+  <tr>
+    <td>Unterstrichen</td>
+    <td></td>
+    <td>
+      <code>&lt;u&gt;Text&lt;/u&gt;</code>
+    </td>
+    <td>
+      <u>Text</u>
+    </td>
+  </tr>
+</table>
+
+### Zeilenumbrüche
 
 <p>
   Zeilenumbrüche können in Markdown durch drücken der <code>Enter</code> Taste erreicht werden. Um einen Zeilenumbruch
@@ -97,119 +206,7 @@ Repeatio unterstützt die Gestaltung mit `Markdown` und `HTML` für die folgende
 
 <p id='footnote-line-break-1'>[1]: Beachte die zwei Leerzeichen!</p>
 
--->
-
-### Textformatierung (fett, kursiv, durchgestrichen, Code, Unterstrichen)
-
-<table>
-  <tr>
-    <th>Typ</th>
-    <th>Markdown</th>
-    <th>HTML</th>
-    <th>Resultat</th>
-  </tr>
-  <tr>
-    <td>Fett</td>
-    <td>
-      <code>**Text**</code>
-    </td>
-    <td>
-      <code>&lt;b&gt;Text&lt;/b&gt;</code>
-    </td>
-    <td>
-      <b>Text</b>
-    </td>
-  </tr>
-  <tr>
-    <td>Kursiv</td>
-    <td>
-      <code>*Text*</code> or <code>_Text_</code>
-    </td>
-    <td>
-      <code>&lt;i&gt;Text&lt;/i&gt;</code>
-    </td>
-    <td>
-      <i>Text</i>
-    </td>
-  </tr>
-  <tr>
-    <td>Fett und kursiv</td>
-    <td>
-      <code>***Text***</code>
-    </td>
-    <td>
-      <code>&lt;b&gt;&lt;i&gt;Text&lt;/i&gt;&lt;/b&gt;</code>
-    </td>
-    <td>
-      <b>
-        <i>Text</i>
-      </b>
-    </td>
-  </tr>
-  <tr>
-    <td>Durchgestrichen</td>
-    <td>
-      <code>~~Text~~</code>
-    </td>
-    <td>
-      <code>&lt;s&gt;Text&lt;/s&gt;</code>
-    </td>
-    <td>
-      <s>Text</s>
-    </td>
-  </tr>
-  <tr>
-    <td>Code</td>
-    <td>
-      <code>`Text`</code>
-    </td>
-    <td>
-      <code>&lt;code&gt;Text&lt;/code&gt;</code>
-    </td>
-    <td>
-      <code>Text</code>
-    </td>
-  </tr>
-  <tr>
-    <td>Unterstrichen</td>
-    <td></td>
-    <td>
-      <code>&lt;u&gt;Text&lt;/u&gt;</code>
-    </td>
-    <td>
-      <u>Text</u>
-    </td>
-  </tr>
-</table>
-
-<!--
-## Markdown Formatierung ignorieren
-
-Benutze Rückstriche, um die Markdown Formatierung zu ignorieren.
-
-<table>
-  <tr>
-    <th>Input</th>
-    <th>Resultat</th>
-  </tr>
-  <tr>
-    <td>
-
-```markdown
-Dieser \*Text ist nicht beinflusst\* von Markdown
-```
-
-  </td>
-    <td>
-      <p>Dieser *Text ist nicht beinflusst* von Markdown</p>
-    </td>
-  </tr>
-</table>
-
--->
-
-<!---
-## Listen
+### Listen
 
 Es gibt zwei Arten von Listen: **Ungeordnete** und **Geordnete** Listen.
 
@@ -298,18 +295,7 @@ Text außerhalb der Liste
     </tr>
   </table>
 
-:::caution Achtung
-Um eine Liste in Markdown zu beenden, ist es es notwending eine leere Zeile zwischen der Liste und dem folgenden Inhalt oder zwei Leerzeichen am Ende des letzten Listenelements einzufügen.
-:::
-
-:::info Info
-Ungeordnete Listen in Markdown können Sterne (<code>\*</code>), Minus-Symbole (<code>-</code>) oder Plus-Symbole (<code>+</code>) verwenden.
-:::
-
--->
-
-<!---
-## Tabellen
+### Tabellen
 
   <table>
     <tr>
@@ -379,8 +365,6 @@ Benutze die folgendene Syntax unterhalb der Überschrift, um Elemente in einer M
 
 :::
 
--->
-
 ### Bilder
 
 Bilder können mit der Syntax `![Alt Text](www.link-to-image.com)` hinzufügen werden.
@@ -397,8 +381,6 @@ Der Alt Text wird angezeigt, wenn das Bild aus irgendeinem Grund nicht geladen w
     </tr>
     <tr>
       <td>
-
-<!-- Test -->
 
 ```markdown
 ![md](link-to-image)
@@ -433,20 +415,16 @@ Benutze inline CSS in Kombination mit HTML, um ein Element zu stylen.
 ```markdown
 Dieser Text ist nicht beinflusst von CSS
 
-<p style="color: lightblue; font-weight: 700">Dieser Text ist blau</p>
+<p style="color: red">Dieser Text ist rot</p>
 ```
 
 </td>
     <td>
       <p>Dieser Text ist nicht beinflusst von CSS</p>
-      <p style={{color: "lightblue", fontWeight: 700}}>Dieser Text ist blau</p>
+      <p style={{color: "red"}}>Dieser Text ist rot</p>
     </td>
   </tr>
 </table>
-
-:::note Note  
-Using html elements may overwrite the default styling!
-:::
 
 ### Formeln (LaTeX)
 

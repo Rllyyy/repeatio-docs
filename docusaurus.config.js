@@ -21,8 +21,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "Rllyyy", // Usually your GitHub org/user name.
+  projectName: "repeatio-docs", // Usually your repo name.
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -116,6 +116,10 @@ const config = {
           {
             title: "Community",
             items: [
+              {
+                label: "repeatio.de",
+                href: "https://www.repeatio.de",
+              },
               {
                 label: "GitHub - Repeatio",
                 href: "https://github.com/Rllyyy/repeatio",

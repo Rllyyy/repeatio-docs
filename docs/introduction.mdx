@@ -3,7 +3,6 @@ sidebar_position: 1
 slug: /
 ---
 
-import Logo from "/src/components/Logo/index.tsx";
 import Image from "../static/img/3-mobile.png";
 import VideoTutorial from "/src/components/VideoTutorial/index.tsx";
 
@@ -40,7 +39,6 @@ Um stattdessen direkt mit dem **Lernen anzufangen, besuche [repeatio.de](https:/
 
 :::caution Wichtige Hinweise
 
-- Das Projekt befined sich in einem frühen Entwicklungsstadium, folglich können Fehler auftreten!
 - Das **Leeren des Browser-Cache** (z.B. vor einer Prüfung) führt zum **Verlust der Daten**!
 - Einige Features / UI-Elemente funktionieren noch nicht (z.B. Modulfortschritt, Statistiken, etc. pp.)!
 
@@ -60,8 +58,8 @@ Keine Lust zu lesen? In diesem Video werden kurz die wichtigsten Funktionen von 
 
 ## Erste Schritte
 
-Um mit dem Lernen zu beginnen, muss auf der [Plattform](https://repeatio.de) zunächst ein **[Modul erstellt](./module/create-module)** oder **[importiert](/module/import-module)** werden.  
-Danach können in dem Modul **[Fragen hinzugefügt](./questions/add-question)** werden, die dann später in **[verschienden Modi](./practice-modes/modes)** interaktiv abgefragt werden können.
+Um mit dem Lernen zu beginnen, muss auf der [Plattform](https://repeatio.de) zunächst ein **[Modul erstellt](./module/add-module#modul-erstellen)** oder **[importiert](/module/add-module#modul-importieren)** werden.  
+Danach können in dem Modul **[Fragen hinzugefügt](./questions/add-question)** werden, die dann später in **[verschienden Modi](./modes)** interaktiv abgefragt werden können.
 
 ## Technische Vorraussetzungen
 
@@ -72,29 +70,10 @@ Damit die Website funktioniert, muss JavaScript aktiviert sein.
 
 Alle Daten (Module, gespeicherte Fragen, Einstellungen, etc. pp.) werden ausschließlich lokal im Browser gespeichert. Es werden keine Daten an einen Server gesendet. Sollte der Cache des Browsers gelöscht werden, **gehen alle Daten verloren**! Die Daten können über die Export Funktion als JSON Datei gespeichert werden.
 
-<!---
-## Programmiersprache und Technik
-
-Repeatio nutzt folgende Technologien:
-
-- [React](https://react.dev/)
-- [Vite](https://vitejs.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [TailwindCSS](https://tailwindcss.com/)
-- [Cypress](https://www.cypress.io/)
-- [yarn](https://yarnpkg.com/)
-- [Netlify](https://www.netlify.com/)
-- Alle verwendeten externen Bibliotheken finden sich [hier](https://github.com/Rllyyy/repeatio/blob/main/package.json).
-
--->
-
 ## Über den Autor und das Projekt
 
-Das Projekt wurde 2022 von Niklas Fischer in eigener Entwicklung erstellt und befindet sich seitdem in aktiver Entwicklung. Das Projekt ist Open Source. Der gesamte Quellcode findet sich auf GitHub. Gehostet wird die Website auf Netlify.
-
-## Lizenz
-
-Das Projekt nutzt die GNU GENERAL PUBLIC LICENSE Version 3.0. Diese Lizenz erlaubt es jedem, das Projekt zu kopieren, zu modifizieren und zu verbreiten. Das Projekt darf auch kommerziell genutzt werden. Die einzige Bedingung ist, dass die Lizenz beibehalten wird und der Quellcode öffentlich zugänglich ist. Bevor das Projekt kommerziell genutzt wird, sollte die [Lizenz](https://github.com/Rllyyy/repeatio/blob/main/LICENSE) gelesen werden.
+Das Projekt wurde 2022 von Niklas Fischer in eigener Entwicklung erstellt und befindet sich seitdem in aktiver Entwicklung. Das Projekt basiert auf der JavaScript-Bibliothek [React](https://react.dev/) und nutzt darüber hinaus die Technologien [Vite](https://vitejs.dev/), [TypeScript](https://www.typescriptlang.org/), [Yarn](https://yarnpkg.com/) und [Cypress](https://www.cypress.io/).
+Das gesamte Quellcode ist auf [GitHub](https://github.com/Rllyyy/repeatio) einsehbar. Gehostet wird die Website auf Netlify.
 
 ## Versionen
 
@@ -150,14 +129,9 @@ General wird empfohlen, die neuste stabile Version zu nutzen. Die neuste Version
 
 </table>
 
-## Gesetzliche Vorschriften
+## Lizenz
 
-Der Autor schließt jegliche Haftung für Schäden, die direkt oder indirekt aus der Nutzung der Plattform entstehen, aus. Für die erstellten Inhalte sind außschließlich die Nutzer verantwortlich.
-
-Die Anwendung entspricht den geltenden Datenschutzbestimmungen, insbesondere der Datenschutz-Grundverordnung (DSGVO). Eine weitergabe von Daten an Dritte erfolgt nicht. Es werden ausschließlich technische Cookies zum speichern von Modulen und Einstellungen lokal gespeichert.
-Weitere Informationen zur Datenerhebung, -verarbeitung und -speicherung finden sich in der [Datenschutzerklärung](https://repeatio.de/privacy).
-
-Angaben gem. § 5 TMG finden sich im [Impressum](http://repeatio.de/legal-notice)
+Das Projekt nutzt die GNU GENERAL PUBLIC LICENSE Version 3.0. Diese Lizenz erlaubt es jedem, das Projekt zu kopieren, zu modifizieren und zu verbreiten. Das Projekt darf auch kommerziell genutzt werden. Die einzige Bedingung ist, dass die Lizenz beibehalten wird und der Quellcode öffentlich zugänglich ist. Bevor das Projekt kommerziell genutzt wird, sollte die [Lizenz](https://github.com/Rllyyy/repeatio/blob/main/LICENSE) gelesen werden.
 
 ## Kontakt
 

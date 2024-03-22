@@ -112,6 +112,31 @@ li::marker {
   text-transform: initial !important;
 }
 
+h1 {
+  font-size: 2.5rem !important;
+}
+
+h2 {
+  font-size: 1.8rem !important;
+  margin-top: 1.2em !important;
+  margin-bottom: 0.7em !important;
+}
+
+h3 {
+  font-size: 1.25rem !important;
+  margin-bottom: 0.7em !important;
+}
+
+h4 {
+  font-size: 1rem !important;
+  margin-bottom: 0.5em !important;
+}
+
+p {
+  margin-top: 0.5em !important;
+  margin-bottom: 0.5em !important;
+}
+
 /* Css for print */
 @media print {
   :root {
