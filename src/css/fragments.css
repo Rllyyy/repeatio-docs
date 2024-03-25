@@ -1,4 +1,8 @@
-/* Source: https://github.com/algolia/docsearch/blob/main/packages/website/src/css/fragments.css */
+/**
+ * Significant parts of this code are taken from docsearch and is copyrighted by Algolia.
+ * The original code is licensed under MIT License. 
+ * The original code can be found at https://github.com/algolia/docsearch/blob/main/packages/website/src/css/fragments.css 
+ */
 
 :root {
   --nebula-900: #141d61;

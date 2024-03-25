@@ -1,39 +1,3 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* TODO add author
- https://github.com/cypress-io/cypress-documentation/blob/main/src/css/custom.scss
- 
- */
-
-/* You can override the default Infima variables here. */
-:root {
-  /* --ifm-container-width-xl: 1400px; */
-  /* --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1); */
-}
-
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-/* [data-theme="dark"] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-} */
 @import url(fragments.css);
 
 *,
@@ -46,16 +10,13 @@
 
 :root {
   --ifm-font-size-base: 18px;
-  /* --ifm-code-font-size: 90%; */
   --ifm-font-color-base: var(--ifm-color-gray-800);
   --ifm-background-color: #fff;
   --ifm-color-primary: var(--nebula-600);
-  /* --ifm-footer-background-color: var(--grey-100); */
   --ifm-menu-color-background-active: var(--ifm-color-emphasis-200);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 255, 0);
 }
 
-/* [data-theme='dark'] */
 html[data-theme="dark"] {
   --ifm-color-primary: var(--nebula-500);
   --ifm-font-color-base: var(--ifm-color-gray-400);
@@ -69,45 +30,12 @@ html[data-theme="dark"] {
   --ifm-menu-color-background-active: #21243d;
 }
 
-.theme-code-block-highlighted-line {
-  background-color: red;
-}
-
-.docusaurus-highlight-code-line {
-  background-color: blue; /* rgba(0, 0, 0, 0.1);*/
-  display: block;
-  margin: 0 calc(-1 * var(--ifm-pre-padding));
-  padding: 0 var(--ifm-pre-padding);
-}
-
-html[data-theme="dark"] .docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-li::marker {
-  position: relative;
-}
-
-li {
-  position: relative;
-}
-
-/* li:before {
-  content: "";
-  position: absolute;
-  left: -20px;
-  background-color: red;
-  z-index: -1;
-  display: inline-block;
-  width: 16px;
-  height: 100%;
-  border-radius: 5px;
-} */
-
+/* Increase the font-weight of the number infront of ordererd lists */
 li::marker {
   font-weight: 500;
 }
 
+/* Force initial text-transform instead of default uppercase */
 .admonitionHeading_node_modules-\@docusaurus-theme-classic-lib-theme-Admonition-styles-module {
   text-transform: initial !important;
 }
