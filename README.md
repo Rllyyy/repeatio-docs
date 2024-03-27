@@ -1,41 +1,29 @@
-# Website
+# Repeatio - Benutzerdokumentation
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+Dieses Projekt beinhaltet den Programmcode hinter der Benutzerdokumentation von [repeatio.de](https://repeatio.de).
+Die Benutzerdokumentation wurde mit [Docusaurus 2](https://docusaurus.io/) erstellt.
+In naher Zukunft wird diese Dokumentation auch über eine Website verfügbar sein.
 
 ### Installation
 
-```
-$ yarn
-```
-
-### Local Development
-
-```
-$ yarn start
+```bash
+npm install
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+Mit diesem Befehl werden alle notwendigen Pakete heruntergeladen.
 
-### Build
+### Lokale Entwicklung
 
-```
-$ yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
+```bash
+npm start
 ```
 
-Not using SSH:
+Dieser Befehl startet den lokalen Entwicklungsserver.
 
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
+### Programm erstellen
+
+```bash
+npm build
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Dieser Befehl startet den Build-Prozess des Programms. Alle Dateien finden sie im `build` Verzeichnis.
