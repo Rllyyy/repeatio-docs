@@ -1,6 +1,5 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
-// TODO https://docusaurus.io/blog/releases/3.0#esm-ts-configs
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
@@ -21,18 +20,15 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "Rllyyy", // Usually your GitHub org/user name.
-  projectName: "repeatio-docs", // Usually your repo name.
+  organizationName: "Rllyyy",
+  projectName: "repeatio-docs",
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
 
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: "de",
+    locales: ["de"],
   },
 
   presets: [
@@ -46,13 +42,8 @@ const config = {
           remarkPlugins: [math],
           rehypePlugins: [katex],
           editUrl: "https://github.com/Rllyyy/repeatio-docs/tree/main/",
-          /* editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/', */
         },
-        blog: false /* {
-          showReadingTime: true,
-          editUrl: "https://github.com/Rllyyy/repeatio-docs/tree/main/",
-        }, */,
+        blog: false,
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
@@ -81,17 +72,9 @@ const config = {
           src: "img/logo.svg",
         },
         items: [
-          // {
-          //   type: "docSidebar",
-          //   sidebarId: "tutorialSidebar",
-          //   position: "right",
-          //   label: "Tutorial",
-          // },
-          /* Uncomment this if you want to link the blog */
-          /* { to: "/blog", label: "Blog", position: "left" }, */
           {
             href: "https://www.repeatio.de",
-            label: "Start Learning",
+            label: "repeatio.de",
             position: "right",
           },
           {
@@ -131,7 +114,7 @@ const config = {
             ],
           },
           {
-            title: "More",
+            title: "Mehr",
             items: [
               {
                 label: "Personal Website",

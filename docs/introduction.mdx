@@ -8,9 +8,7 @@ import VideoTutorial from "/src/components/VideoTutorial/index.tsx";
 
 # Was ist Repeatio?
 
-<img src={Image} width={550} style={{ display: "block", marginInline: "auto", marginBottom: "40px" }} />
-
-<p>
+<img src={Image} width={530} style={{ display: "block", marginInline: "auto", marginBottom: "40px" }} />
 
 Repeatio ist eine **kostenlose Open Source Plattform**, die das Lernen für Prüfungen durch interaktive Lernmöglichkeiten vereinfacht.
 Bereite dich durch ein gezieltes Training auf Prüfungen vor und verbessere deine Noten.
@@ -18,24 +16,12 @@ Bereite dich durch ein gezieltes Training auf Prüfungen vor und verbessere dein
 Diese Dokumentation führt durch die verschiedenen Funktionen von Repeatio.  
 Um stattdessen direkt mit dem **Lernen anzufangen, besuche [repeatio.de](https://repeatio.de)**.
 
-</p>
+Mit Repeatio ist es möglich folgende Fragetypen zu erstellen und interaktiv zu lernen:
 
-<p>Repeatio bereitet dich auf folgende Fragetypen vor:</p>
-
-<ul>
-  <li>
-    <strong>Multiple Choice:</strong> Wähle die richtige Antwort aus.
-  </li>
-  <li>
-    <strong>Multiple Response:</strong> Wähle mehrere richtige Antworten aus.
-  </li>
-  <li>
-    <strong>Lückentext:</strong> Fülle die Lücken im Text aus.
-  </li>
-  <li>
-    <strong>Extended Match:</strong> Ordne die Antwortenmöglichkeiten richtig zu.
-  </li>
-</ul>
+- **[Multiple Choice](/question-types#multiple-choice):** Wähle die richtige Antwort aus.
+- **[Multiple Response](/question-types#multiple-response):** Wähle mehrere richtige Antworten aus.
+- **[Lückentext](/question-types#lückentext-gap-text):** Fülle die Lücken im Text aus.
+- **[Extended Match](/question-types#erweiterte-zuordnungsaufgabe-extended-match):** Ordne die Antwortenmöglichkeiten richtig zu.
 
 :::caution Wichtige Hinweise
 
@@ -52,32 +38,25 @@ Die Plattform ist nicht für die Durchführung von Prüfungen geeignet, da die A
 
 ## Video-Tutorial
 
-Keine Lust zu lesen? In diesem Video werden kurz die wichtigsten Funktionen von Repeatio erklärt.
+Keine Lust zu lesen? In diesem Video werden die wichtigsten Funktionen von Repeatio kurz erklärt.
 
 <VideoTutorial />
 
 ## Erste Schritte
 
-Um mit dem Lernen zu beginnen, muss auf der [Plattform](https://repeatio.de) zunächst ein **[Modul erstellt](./module/add-module#modul-erstellen)** oder **[importiert](/module/add-module#modul-importieren)** werden.  
-Danach können in dem Modul **[Fragen hinzugefügt](./questions/add-question)** werden, die dann später in **[verschienden Modi](./modes)** interaktiv abgefragt werden können.
+Um mit dem Lernen zu beginnen, muss auf der [Plattform](https://repeatio.de) zunächst ein **[Modul erstellt](./module/add-module#modul-erstellen)** oder **[importiert](/module/add-module#modul-importieren)** werden. Danach können in dem Modul **[Fragen hinzugefügt](./questions/add-question)** werden, die dann später in **[verschienden Modi](./modes)** interaktiv abgefragt werden können.
 
 ## Technische Vorraussetzungen
 
-Repeatio unterstützt alle gängigen Endgeräte und Browser. Auf Apple Systemen kann es jedoch zu Anzeige Problemen kommen, da die Website nicht für Safari bzw. WebKit optimiert ist. Es wir empfohlen Firefox oder einen Chromium Browser (Google Chrome, Brave, Opera, Vivaldi, ...) zu nutzen. Achten Sie darauf ihren Browser auf dem neusten Stand zu halten.
-Damit die Website funktioniert, muss JavaScript aktiviert sein.
+Repeatio unterstützt alle gängigen Endgeräte und Browser. Auf Apple Systemen kann es jedoch zu Anzeige Problemen kommen, da die Website nicht für Safari bzw. WebKit optimiert ist. Empfohlen wird die Verwendung von Firefox oder eines Chromium-Browsers (Google Chrome, Brave, Opera, Vivaldi, ...). Für eine fehlerfreie Nutzung wird empfohlen, immer die neuste Version des Browsers zu verwenden. JavaScript muss aktiviert sein, damit die Website korrekt funktioniert.
 
 ## Technische Besonderheit
 
 Alle Daten (Module, gespeicherte Fragen, Einstellungen, etc. pp.) werden ausschließlich lokal im Browser gespeichert. Es werden keine Daten an einen Server gesendet. Sollte der Cache des Browsers gelöscht werden, **gehen alle Daten verloren**! Die Daten können über die Export Funktion als JSON Datei gespeichert werden.
 
-## Über den Autor und das Projekt
-
-Das Projekt wurde 2022 von Niklas Fischer in eigener Entwicklung erstellt und befindet sich seitdem in aktiver Entwicklung. Das Projekt basiert auf der JavaScript-Bibliothek [React](https://react.dev/) und nutzt darüber hinaus die Technologien [Vite](https://vitejs.dev/), [TypeScript](https://www.typescriptlang.org/), [Yarn](https://yarnpkg.com/) und [Cypress](https://www.cypress.io/).
-Das gesamte Quellcode ist auf [GitHub](https://github.com/Rllyyy/repeatio) einsehbar. Gehostet wird die Website auf Netlify.
-
 ## Versionen
 
-General wird empfohlen, die neuste stabile Version zu nutzen. Die neuste Version ist immer auf der Webseite (repeatio.de) verfügbar. Instabile Versionen sind nicht ausführlich getestet und können Fehler enthalten. Beachte, dass Daten im lokalen Speicher gespeichert werden und daher nicht zwischen den verschiedenen Webseiten ausgetauscht werden. Exportiere deine Daten, wenn du zwischen den Versionen wechselst. Dieses Problem tritt nicht auf, wenn du nur repeatio.de nutzt.
+Repeatio.de nutzt immer die aktuellste stabile Version. Auf ältere Versionen sollte nur bei Kompabilitätsproblemen zurückgegriffen werden.
 
 <table>
   <thead>
@@ -93,7 +72,7 @@ General wird empfohlen, die neuste stabile Version zu nutzen. Die neuste Version
       <td><b>v0.6</b></td>
       <td>17.02.2024</td>
       <td><a href="https://github.com/Rllyyy/repeatio/releases/tag/v0.6">Versionshinweise</a></td>
-      <td><a href="https://release-v0-6--repeatio.netlify.app/">Webseite</a></td>
+      <td><a href="https://repeatio.de">Webseite</a></td>
     </tr>
     <tr>
       <td>v0.5</td>
@@ -117,22 +96,31 @@ General wird empfohlen, die neuste stabile Version zu nutzen. Die neuste Version
       <td>v0.2</td>
       <td>03.06.2022</td>
       <td><a href="https://github.com/Rllyyy/repeatio/releases/tag/v0.2">Versionshinweise</a></td>
-      <td><a href="https://release-v0-2--repeatio.netlify.app/">Webseite</a></td>
+      <td>-</td>
     </tr>
     <tr>
       <td>v0.1</td>
       <td>01.02.2022</td>
       <td><a href="https://github.com/Rllyyy/repeatio/releases/tag/v0.1">Versionshinweise</a></td>
-      <td><a href="https://release-v0-1--repeatio.netlify.app/">Webseite</a></td>
+      <td>-</td>
     </tr>
   </tbody>
 
 </table>
 
-## Lizenz
+## Lizenz und rechtliche Hinweise
 
-Das Projekt nutzt die GNU GENERAL PUBLIC LICENSE Version 3.0. Diese Lizenz erlaubt es jedem, das Projekt zu kopieren, zu modifizieren und zu verbreiten. Das Projekt darf auch kommerziell genutzt werden. Die einzige Bedingung ist, dass die Lizenz beibehalten wird und der Quellcode öffentlich zugänglich ist. Bevor das Projekt kommerziell genutzt wird, sollte die [Lizenz](https://github.com/Rllyyy/repeatio/blob/main/LICENSE) gelesen werden.
+Das Projekt steht unter der GNU GENERAL PUBLIC LICENSE Version 3.0.
+Für Privatperson und Organisationen ist das Projekt kostenlos nutzbar.
+Diese Lizenz erlaubt es jedem, den Quellcode des Projekts zu kopieren, zu modifizieren und zu verbreiten. Die einzige Bedingung ist, dass die Lizenz beibehalten wird und der Quellcode öffentlich zugänglich ist. Bevor das Projekt kommerziell genutzt wird, sollte die [Lizenz](https://github.com/Rllyyy/repeatio/blob/main/LICENSE) gelesen werden.
+
+Weitere rechtliche Informationen sind dem [Impressum](https://repeatio.de/legal-notice) und der [Datenschutzerklärung](https://repeatio.de/privacy) zu entnehmen.
+
+## Über den Autor und das Projekt
+
+Das Projekt wurde von Niklas Fischer erstellt und befindet sich seit 2022 in aktiver Entwicklung.
+Das Projekt basiert auf der JavaScript-Bibliothek [React](https://react.dev/) und nutzt darüber hinaus die Technologien [Vite](https://vitejs.dev/), [TypeScript](https://www.typescriptlang.org/), [Yarn](https://yarnpkg.com/) und [Cypress](https://www.cypress.io/). Der Quellcode ist auf [GitHub](https://github.com/Rllyyy/repeatio) einsehbar. Gehostet wird die Website auf Netlify.
 
 ## Kontakt
 
-Bei Fragen, Anregungen oder Problemen, schreiben Sie eine E-Mail an [contact@repeatio.de](mailto:contact@repeatio.de) oder nutzen Sie [GitHub](https://github.com/Rllyyy/repeatio).
+Bei Fragen, Anregungen oder Problemen ist der Entwickler per E-Mail ([contact@repeatio.de](mailto:contact@repeatio.de)) oder [GitHub](https://github.com/Rllyyy/repeatio) erreichbar.
