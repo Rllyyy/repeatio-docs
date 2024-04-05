@@ -33,3 +33,5 @@ Dieser Befehl startet den Build-Prozess des Programms. Alle Dateien finden sie i
 ```bash
 npm run serve
 ```
+
+Mit diesem Befehl wird das erstellte Programm lokal gestartet.

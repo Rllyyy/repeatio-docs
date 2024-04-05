@@ -68,7 +68,7 @@ const config = {
       navbar: {
         title: "repeatio",
         logo: {
-          alt: "My Site Logo",
+          alt: "The logo of Repeatio, which is a side view of a brain",
           src: "img/logo.svg",
         },
         items: [
