@@ -38,15 +38,15 @@ jobs:
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
-        # with:
-        # node-version: 16.x
-        # cache: yarn
+        with:
+          # node-version: 16.x
+          cache: npm
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile --non-interactive
+        run: npm install --frozen-lockfile --non-interactive
 
       - name: Build
-        run: yarn build
+        run: npm build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
