@@ -2,6 +2,7 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Docusaurus v2",
   "docs": "https://v2.docusaurus.io/docs/typescript-support",
+  "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
     "allowJs": true,
     "esModuleInterop": true,
